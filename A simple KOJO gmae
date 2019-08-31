@@ -1,0 +1,23 @@
+clear()
+var secretNum = 9
+var guess = 0;
+var guessCount = 0
+var totalGuesses = 3
+var outOfGuesses = false
+
+while (guess != secretNum && !outOfGuesses) {
+    guess = readInt("Make a guess: ")
+    if (guessCount < totalGuesses) {
+        println(guess)
+        guessCount = guessCount + 1
+    }
+    else {
+        outOfGuesses = true
+    }
+}
+
+if (outOfGuesses && guess!= secretNum) {
+    print("You lose!")
+} else {
+    print("You Win!")
+}
